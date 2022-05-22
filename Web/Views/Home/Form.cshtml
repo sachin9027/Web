@@ -1,0 +1,47 @@
+﻿
+
+
+@model Web.Connectiondata.radika
+
+@using (Html.BeginForm("Form", "Home", FormMethod.Post))
+{
+
+
+
+    @Html.HiddenFor(m => m.id)
+
+
+    <div class="form-group">
+        <lable>Name</lable>
+        @Html.TextBoxFor(m => m.name, new { @class = "form-control", @required = "required" })
+        @Html.ValidationMessageFor(m => m.name, "", new { @class = "error" })<br />
+
+    </div>
+
+
+    <div class="form-group">
+        <lable>Age</lable>
+        @Html.TextBoxFor(m => m.age, new { @class = "form-control", @required = "required" })
+        @Html.ValidationMessageFor(m => m.age, "", new { @class = "error" })<br />
+
+    </div>
+
+    <div class="form-group">
+        <lable>City</lable>
+        @Html.TextBoxFor(m => m.city, new { @class = "form-control", @required = "required" })
+        @Html.ValidationMessageFor(m => m.city, "", new { @class = "error" })<br />
+
+    </div>
+
+    <div class="form-group">
+        <lable>Salary</lable>
+        @Html.TextBoxFor(m => m.salary, new { @class = "form-control", @required = "required" })
+        @Html.ValidationMessageFor(m => m.salary, "", new { @class = "error" })<br />
+
+    </div>
+   
+
+    <button type="Submit" class="btn btn-success">Submit</button>
+
+
+}
